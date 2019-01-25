@@ -1,0 +1,38 @@
+import React from 'react';
+import ReactFullpage from '@fullpage/react-fullpage';
+import SampleSection from './sections/SampleSection';
+import SampleSectionSec from './sections/SampleSectionSec';
+
+class FullPageReact extends React.Component {
+    render() {
+        return (
+            <ReactFullpage
+            scrollingSpeed = {1200}
+                render={() => {
+                    return (
+                        <div>
+                            <div className="section">
+                                <SampleSection />
+                            </div>
+                            <div className="section">
+                                <SampleSectionSec />
+                            </div>
+                            <div className="section">
+                                <SampleSection />
+                            </div>
+                            <div className="section">
+                                <SampleSectionSec />
+                            </div>
+                            <div className="section">
+                                <SampleSection />
+                            </div>
+                        </div>
+                    );
+                }}
+            />
+        );
+    }
+}
+
+export default FullPageReact;
+// ReactDOM.render(<Fullpage />, document.getElementById('react-root'));
